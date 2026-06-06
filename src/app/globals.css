@@ -1,0 +1,543 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-pastel-pink: var(--pastel-pink);
+  --color-pastel-peach: var(--pastel-peach);
+  --color-pastel-mint: var(--pastel-mint);
+  --color-pastel-lavender: var(--pastel-lavender);
+  --color-pastel-sky: var(--pastel-sky);
+}
+
+:root {
+  --radius: 0.625rem;
+  /* Base colors - soft white background */
+  --background: oklch(0.99 0.005 240);
+  --foreground: oklch(0.2 0.03 250);
+  /* Card with slight blue tint */
+  --card: oklch(0.99 0.008 250);
+  --card-foreground: oklch(0.2 0.03 250);
+  /* Popover */
+  --popover: oklch(0.99 0.005 240);
+  --popover-foreground: oklch(0.2 0.03 250);
+  /* Primary - Deep elegant blue */
+  --primary: oklch(0.45 0.15 250);
+  --primary-foreground: oklch(0.99 0 0);
+  /* Secondary - Soft pastel blue */
+  --secondary: oklch(0.93 0.04 250);
+  --secondary-foreground: oklch(0.3 0.08 250);
+  /* Muted - Very light blue gray */
+  --muted: oklch(0.95 0.02 250);
+  --muted-foreground: oklch(0.5 0.03 250);
+  /* Accent - Soft pastel blue */
+  --accent: oklch(0.9 0.06 250);
+  --accent-foreground: oklch(0.25 0.08 250);
+  /* Destructive */
+  --destructive: oklch(0.577 0.245 27.325);
+  /* Border and input */
+  --border: oklch(0.9 0.02 250);
+  --input: oklch(0.9 0.02 250);
+  --ring: oklch(0.45 0.15 250);
+  /* Chart colors - pastel palette */
+  --chart-1: oklch(0.7 0.12 250);
+  --chart-2: oklch(0.75 0.1 180);
+  --chart-3: oklch(0.8 0.08 320);
+  --chart-4: oklch(0.78 0.1 30);
+  --chart-5: oklch(0.72 0.09 140);
+  /* Sidebar */
+  --sidebar: oklch(0.98 0.01 250);
+  --sidebar-foreground: oklch(0.2 0.03 250);
+  --sidebar-primary: oklch(0.45 0.15 250);
+  --sidebar-primary-foreground: oklch(0.99 0 0);
+  --sidebar-accent: oklch(0.93 0.04 250);
+  --sidebar-accent-foreground: oklch(0.3 0.08 250);
+  --sidebar-border: oklch(0.9 0.02 250);
+  --sidebar-ring: oklch(0.45 0.15 250);
+  /* Custom pastel colors */
+  --pastel-pink: oklch(0.88 0.08 350);
+  --pastel-peach: oklch(0.88 0.08 40);
+  --pastel-mint: oklch(0.88 0.08 160);
+  --pastel-lavender: oklch(0.88 0.08 280);
+  --pastel-sky: oklch(0.88 0.08 230);
+}
+
+.dark {
+  --background: oklch(0.15 0.02 250);
+  --foreground: oklch(0.95 0.01 250);
+  --card: oklch(0.2 0.03 250);
+  --card-foreground: oklch(0.95 0.01 250);
+  --popover: oklch(0.2 0.03 250);
+  --popover-foreground: oklch(0.95 0.01 250);
+  --primary: oklch(0.6 0.15 250);
+  --primary-foreground: oklch(0.15 0.02 250);
+  --secondary: oklch(0.25 0.05 250);
+  --secondary-foreground: oklch(0.9 0.03 250);
+  --muted: oklch(0.25 0.04 250);
+  --muted-foreground: oklch(0.65 0.03 250);
+  --accent: oklch(0.3 0.08 250);
+  --accent-foreground: oklch(0.9 0.03 250);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(0.3 0.03 250);
+  --input: oklch(0.3 0.03 250);
+  --ring: oklch(0.6 0.15 250);
+  --chart-1: oklch(0.55 0.2 250);
+  --chart-2: oklch(0.6 0.15 180);
+  --chart-3: oklch(0.65 0.12 320);
+  --chart-4: oklch(0.6 0.15 30);
+  --chart-5: oklch(0.55 0.12 140);
+  --sidebar: oklch(0.18 0.03 250);
+  --sidebar-foreground: oklch(0.95 0.01 250);
+  --sidebar-primary: oklch(0.6 0.15 250);
+  --sidebar-primary-foreground: oklch(0.15 0.02 250);
+  --sidebar-accent: oklch(0.25 0.05 250);
+  --sidebar-accent-foreground: oklch(0.9 0.03 250);
+  --sidebar-border: oklch(0.3 0.03 250);
+  --sidebar-ring: oklch(0.6 0.15 250);
+  /* Custom pastel colors for dark mode */
+  --pastel-pink: oklch(0.6 0.15 350);
+  --pastel-peach: oklch(0.6 0.15 40);
+  --pastel-mint: oklch(0.6 0.15 160);
+  --pastel-lavender: oklch(0.6 0.15 280);
+  --pastel-sky: oklch(0.6 0.15 230);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: oklch(0.95 0.02 250);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: oklch(0.7 0.1 250);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.55 0.12 250);
+}
+
+/* ========================================
+   1. FILM GRAIN TEXTURE OVERLAY
+   ======================================== */
+
+/* Film grain animation keyframes */
+@keyframes grain {
+  0%, 100% { transform: translate(0, 0); }
+  10% { transform: translate(-5%, -10%); }
+  20% { transform: translate(-15%, 5%); }
+  30% { transform: translate(7%, -25%); }
+  40% { transform: translate(-5%, 25%); }
+  50% { transform: translate(-15%, 10%); }
+  60% { transform: translate(15%, 0%); }
+  70% { transform: translate(0%, 15%); }
+  80% { transform: translate(3%, 35%); }
+  90% { transform: translate(-10%, 10%); }
+}
+
+/* Film grain overlay - applied to artwork images */
+.film-grain-overlay {
+  position: relative;
+}
+
+.film-grain-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.4;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  animation: grain 8s steps(10) infinite;
+  border-radius: inherit;
+}
+
+/* ========================================
+   2. GRAYSCALE TO COLOR IMAGE HOVER
+   ======================================== */
+
+.grayscale-to-color {
+  filter: grayscale(100%);
+  transition: filter 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.grayscale-to-color:hover {
+  filter: grayscale(0%);
+}
+
+/* ========================================
+   3. FLUID TYPOGRAPHY SYSTEM
+   ======================================== */
+
+/* Fluid typography using clamp() for responsive text */
+.fluid-display {
+  font-size: clamp(2.5rem, 8vw, 7rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.fluid-heading-1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.fluid-heading-2 {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.fluid-heading-3 {
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  line-height: 1.4;
+}
+
+.fluid-body {
+  font-size: clamp(0.9rem, 2vw, 1.25rem);
+  line-height: 1.7;
+}
+
+.fluid-caption {
+  font-size: clamp(0.75rem, 1.5vw, 1rem);
+  line-height: 1.5;
+}
+
+/* ========================================
+   ARTWORK CARD STYLES
+   ======================================== */
+
+.artwork-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.artwork-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px -12px oklch(0.45 0.15 250 / 0.25);
+}
+
+/* Artwork overlay */
+.artwork-overlay {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.artwork-card:hover .artwork-overlay {
+  opacity: 1;
+}
+
+/* Artwork image - colorida por padrão, grayscale no hover */
+.artwork-image {
+  transition: filter 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s ease;
+  filter: grayscale(0%);
+}
+
+/* No hover, a imagem fica em preto e branco */
+.artwork-card:hover .artwork-image {
+  filter: grayscale(100%);
+  transform: scale(1.05);
+}
+
+/* Artwork overlay - escondido por padrão, visível no hover */
+.artwork-overlay {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.artwork-card:hover .artwork-overlay {
+  opacity: 1;
+}
+
+/* ========================================
+   NAVIGATION STYLES
+   ======================================== */
+
+/* Active nav item */
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, oklch(0.45 0.15 250), oklch(0.55 0.12 280));
+  transition: width 0.3s ease, left 0.3s ease;
+  border-radius: 1px;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+  left: 0;
+}
+
+.nav-link.active {
+  color: oklch(0.45 0.15 250);
+  font-weight: 600;
+}
+
+/* Header scroll states */
+.header-visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.header-hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+/* ========================================
+   SECTION DIVIDER & DECORATIONS
+   ======================================== */
+
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, oklch(0.7 0.1 250), transparent);
+}
+
+/* Gradient backgrounds */
+.gradient-blue {
+  background: linear-gradient(135deg, oklch(0.45 0.15 250), oklch(0.55 0.12 280));
+}
+
+.gradient-pastel {
+  background: linear-gradient(135deg, oklch(0.88 0.08 250), oklch(0.88 0.08 280), oklch(0.88 0.08 320));
+}
+
+/* Text gradient */
+.text-gradient {
+  background: linear-gradient(135deg, oklch(0.4 0.15 250), oklch(0.5 0.12 280));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ========================================
+   WRITING SECTION STYLES
+   ======================================== */
+
+.writing-card {
+  position: relative;
+  background: linear-gradient(135deg, oklch(0.99 0.01 250), oklch(0.97 0.02 255));
+  border: 1px solid oklch(0.9 0.02 250);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.writing-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px -10px oklch(0.45 0.15 250 / 0.15);
+}
+
+.writing-card::before {
+  content: '"';
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-size: 4rem;
+  color: oklch(0.45 0.15 250 / 0.1);
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+/* Decorative quote styling */
+.quote-text {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Staggered animation delays */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+
+/* ========================================
+   SCROLL REVEAL ANIMATIONS
+   ======================================== */
+
+/* Base state - hidden */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), 
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Revealed state - visible */
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Variant: Fade from left */
+.scroll-reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), 
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-reveal-left.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Variant: Fade from right */
+.scroll-reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), 
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-reveal-right.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Variant: Scale up */
+.scroll-reveal-scale {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), 
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-reveal-scale.revealed {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Variant: Blur in */
+.scroll-reveal-blur {
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateY(20px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), 
+              filter 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-reveal-blur.revealed {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+/* Staggered children delay */
+.scroll-reveal-stagger > *:nth-child(1) { transition-delay: 0ms; }
+.scroll-reveal-stagger > *:nth-child(2) { transition-delay: 100ms; }
+.scroll-reveal-stagger > *:nth-child(3) { transition-delay: 200ms; }
+.scroll-reveal-stagger > *:nth-child(4) { transition-delay: 300ms; }
+.scroll-reveal-stagger > *:nth-child(5) { transition-delay: 400ms; }
+.scroll-reveal-stagger > *:nth-child(6) { transition-delay: 500ms; }
+.scroll-reveal-stagger > *:nth-child(7) { transition-delay: 600ms; }
+.scroll-reveal-stagger > *:nth-child(8) { transition-delay: 700ms; }
+.scroll-reveal-stagger > *:nth-child(9) { transition-delay: 800ms; }
+.scroll-reveal-stagger > *:nth-child(10) { transition-delay: 900ms; }
+
+/* Artwork cards stagger */
+.artwork-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), 
+              transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.artwork-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}

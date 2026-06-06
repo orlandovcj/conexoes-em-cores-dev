@@ -1,0 +1,26 @@
+<svg width="600" height="450" viewBox="0 0 600 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="450" fill="url(#artworkGradient)"/>
+  
+  <!-- Frame effect -->
+  <rect x="20" y="20" width="560" height="410" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2" rx="4"/>
+  
+  <!-- Abstract art elements -->
+  <circle cx="150" cy="150" r="60" fill="rgba(59, 130, 246, 0.3)"/>
+  <circle cx="450" cy="200" r="80" fill="rgba(139, 92, 246, 0.25)"/>
+  <rect x="200" y="250" width="200" height="120" rx="10" fill="rgba(236, 72, 153, 0.2)"/>
+  
+  <!-- Palette icon -->
+  <g transform="translate(250, 180)">
+    <path d="M50 0C22.4 0 0 22.4 0 50s22.4 50 50 50c5.5 0 10-4.5 10-10 0-2.6-1-5-2.8-6.8-1.8-1.8-2.8-4.2-2.8-6.8 0-5.5 4.5-10 10-10H80c16.6 0 30-13.4 30-30 0-33.1-26.9-56-60-56zm-25 70c-5.5 0-10-4.5-10-10s4.5-10 10-10 10 4.5 10 10-4.5 10-10 10zm20-30c-5.5 0-10-4.5-10-10s4.5-10 10-10 10 4.5 10 10-4.5 10-10 10zm20 0c-5.5 0-10-4.5-10-10s4.5-10 10-10 10 4.5 10 10-4.5 10-10 10z" fill="rgba(255,255,255,0.4)"/>
+  </g>
+  
+  <text x="300" y="400" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-family="Arial, sans-serif" font-size="16">Obra de Arte</text>
+  
+  <defs>
+    <linearGradient id="artworkGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E0E7FF;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#DBEAFE;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EDE9FE;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>
