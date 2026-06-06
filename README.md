@@ -244,6 +244,3 @@ Para dúvidas sobre React/Next.js:
 - Documentação React: https://react.dev
 - Tailwind CSS: https://tailwindcss.com/docs
 
----
-
-**Bom trabalho no projeto!** 🎨
