@@ -4,7 +4,7 @@ Landing page para exposição de arte na Biblioteca Pública do Estado de Santa 
 
 **Período:** 1 a 30 de abril de 2026
 
-O resultaod final deste projeto pode ser visto em: `https://brsketch.art/conexoes-em-cores/`
+O resultaod final deste projeto pode ser visto em: https://brsketch.art/conexoes-em-cores/
 
 ---
 
