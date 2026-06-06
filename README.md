@@ -71,7 +71,7 @@ Você verá algo como:
   - Local:        http://localhost:3000
 ```
 
-Abra o navegador e acesse: `http://localhost:3000/conexoes-em-cores/`
+Abra o navegador e acesse: `http://localhost:3000`
 
 ### Passo 4: Editar o conteúdo
 
